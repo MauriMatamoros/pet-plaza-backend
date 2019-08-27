@@ -1,0 +1,4 @@
+{
+    "mongoURI": "mongodb+srv://Administrator:8dr4wi9cmD8XVEj@pet-plaza-dev-bqefu.mongodb.net/test?retryWrites=true&w=majority",
+    "jwtSecret": "9sdafz34qGFDg"
+}
