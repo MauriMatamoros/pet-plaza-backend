@@ -34,6 +34,31 @@ router.post('/employee/:id', auth, isAdmin, async (req, res) => {
 	}
 })
 
+router.post('/doctor/:id', auth, isAdmin, async (req, res) => {
+	try {
+		let user = await User.findById(req.params.id)
+
+		if (!user) {
+			return res.status(400).json({ msg: 'User not found' })
+		}
+
+		if (user.role === 'doctor') {
+			return res.json({ msg: 'User is already an Doctor' })
+		}
+
+		user = await User.findOneAndUpdate(
+			{ _id: req.params.id },
+			{ role: 'doctor' },
+			{ new: true }
+		)
+
+		return res.json(user)
+	} catch (error) {
+		console.error(error.message)
+		res.status(500).send('Server Error')
+	}
+})
+
 router.post('/client/:id', auth, isAdmin, async (req, res) => {
 	try {
 		let user = await User.findById(req.params.id)

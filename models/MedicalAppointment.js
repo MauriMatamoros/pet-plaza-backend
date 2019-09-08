@@ -26,6 +26,6 @@ const MedicalAppointmentSchema = new Schema({
 })
 
 module.exports = MedicalAppointment = mongoose.model(
-	'medicalAppointments',
+	'medicalAppointment',
 	MedicalAppointmentSchema
 )
