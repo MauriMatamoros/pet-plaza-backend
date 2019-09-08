@@ -26,6 +26,13 @@ const GroomingAppointmentSchema = new Schema({
 	}
 })
 
+//use hooks to optimize code
+GroomingAppointmentSchema.pre('save', function(next) {
+	const groomingAppointment = this
+	console.log(groomingAppointment)
+	next()
+})
+
 module.exports = GroomingAppointment = mongoose.model(
 	'groomingAppointment',
 	GroomingAppointmentSchema

@@ -15,12 +15,12 @@ const MedicalAppointmentSchema = new Schema({
 		type: Date,
 		default: Date.now
 	},
-	day: {
-		type: Date,
+	date: {
+		type: String,
 		required: true
 	},
 	time: {
-		type: Date,
+		type: String,
 		required: true
 	}
 })

@@ -12,11 +12,15 @@ const HotelAppointmentSchema = new Schema({
 		default: Date.now
 	},
 	from: {
-		type: Date,
+		type: String,
 		required: true
 	},
 	to: {
-		type: Date,
+		type: String,
+		required: true
+	},
+	room: {
+		type: String,
 		required: true
 	}
 })
