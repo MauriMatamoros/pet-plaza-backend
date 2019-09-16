@@ -17,6 +17,7 @@ app.use('/api/users', require('./routes/api/users'))
 app.use('/api/roles', require('./routes/api/roles'))
 app.use('/api/profile', require('./routes/api/profile'))
 app.use('/api/appointments', require('./routes/api/appointment'))
+app.use('/api/products', require('./routes/api/products'))
 
 console.log(moment('').format('MMMM Do YYYY, h:mm:ss a'))
 
